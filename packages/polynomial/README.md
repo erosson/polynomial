@@ -62,3 +62,4 @@ import {Polynomial} from "@erosson/polynomial"
 ```ts
 const {Polynomial} = require("@erosson/polynomial");
 ```
+
