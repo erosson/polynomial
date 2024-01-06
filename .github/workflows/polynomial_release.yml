@@ -1,5 +1,5 @@
 # https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/ci-configurations/github-actions.md
-name: Release
+name: "Release: @erosson/polynomial"
 on:
   push:
     branches: [main, beta]
@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
+        # set the directory for all steps below
         working-directory: packages/polynomial
     permissions:
       contents: write # to be able to publish a GitHub release
