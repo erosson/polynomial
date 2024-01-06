@@ -1,0 +1,41 @@
+{
+  "name": "@erosson/polynomial",
+  "version": "0.0.0",
+  "packageManager": "yarn@1.22.19",
+  "type": "module",
+  "main": "./dist/polynomial.umd.js",
+  "module": "./dist/polynomial.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/polynomial.esm.js",
+      "require": "./dist/polynomial.umd.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "dev": "yarn docs && vite",
+    "build": "tsc && vite build",
+    "prepack": "yarn build",
+    "test": "vitest",
+    "docs": "typedoc src/polynomial.ts --out public/docs",
+    "rootdocs": "yarn docs --out ../../dist/polynomial",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "break_infinity.js": "^2.2.0",
+    "decimal.js": "^10.4.3",
+    "prettier": "^3.1.1",
+    "semantic-release": "^22.0.12",
+    "semantic-release-monorepo": "^7.0.5",
+    "typedoc": "^0.25.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.0",
+    "vitest": "^1.1.1"
+  }
+}

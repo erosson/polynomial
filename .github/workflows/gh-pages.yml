@@ -33,11 +33,13 @@ jobs:
       - run: |
           yarn
           yarn test
-          yarn docs
+          yarn rootdocs
+        working-directory: packages/polynomial
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public/docs
+          # TODO we're a monorepo now, build/merge/upload all docs, not just one package's
+          path: dist/
 
   # Deployment job
   deploy:
