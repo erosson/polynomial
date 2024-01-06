@@ -1,4 +1,5 @@
 {
+    "name": "erosson-typescript-libs",
     "private": true,
     "scripts": {
         "build": "yarn workspaces run build",
