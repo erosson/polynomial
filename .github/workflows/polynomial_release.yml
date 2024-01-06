@@ -3,7 +3,7 @@ name: "Release: @erosson/polynomial"
 on:
   push:
     branches: [main, beta]
-    paths: ["packages/polynomial/**"]
+    paths: ["packages/polynomial/**", ".github/workflows/polynomial_*"]
 
 permissions:
   contents: read
